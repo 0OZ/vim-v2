@@ -32,8 +32,8 @@ vim.keymap.set("n", "<C-]>", function()
   vim.lsp.buf.definition()
 end, { desc = "Go to Definition (LSP)" })
 
--- Add Ctrl+[ to find references
-vim.keymap.set("n", "<C-[>", function()
+-- Add Ctrl+\ to find references (Note: LazyVim also has 'gr' for this)
+vim.keymap.set("n", "<C-\\>", function()
   vim.lsp.buf.references()
 end, { desc = "Find References (LSP)" })
 
