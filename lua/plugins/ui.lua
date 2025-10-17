@@ -42,74 +42,74 @@ return {
         },
         groups = {
           all = {
-            -- Functions - VSCode yellow (like in JS/TS)
-            ["@function"] = { fg = "#DCDCAA" },
-            ["@function.call"] = { fg = "#DCDCAA" },
-            ["@function.builtin"] = { fg = "#DCDCAA" },
-            ["@method"] = { fg = "#DCDCAA" },
-            ["@method.call"] = { fg = "#DCDCAA" },
+            -- Functions - Bright yellow
+            ["@function"] = { fg = "#FFE66D", bold = true },
+            ["@function.call"] = { fg = "#FFE66D", bold = true },
+            ["@function.builtin"] = { fg = "#FFD700", bold = true },
+            ["@method"] = { fg = "#FFE66D", bold = true },
+            ["@method.call"] = { fg = "#FFE66D", bold = true },
 
-            -- Strings - VSCode orange-brown
-            ["@string"] = { fg = "#CE9178" },
-            ["@string.escape"] = { fg = "#D7BA7D" },
-            ["@character"] = { fg = "#CE9178" },
+            -- Strings - Bright orange
+            ["@string"] = { fg = "#FFA657" },
+            ["@string.escape"] = { fg = "#FFD700", bold = true },
+            ["@character"] = { fg = "#FFA657" },
 
-            -- Numbers - VSCode light green
-            ["@number"] = { fg = "#B5CEA8" },
-            ["@float"] = { fg = "#B5CEA8" },
-            ["@boolean"] = { fg = "#569CD6" },
+            -- Numbers - Bright light green
+            ["@number"] = { fg = "#7FFF00", bold = true },
+            ["@float"] = { fg = "#7FFF00", bold = true },
+            ["@boolean"] = { fg = "#569CD6", bold = true },
 
-            -- Variables - VSCode light blue
-            ["@variable"] = { fg = "#9CDCFE" },
-            ["@variable.builtin"] = { fg = "#569CD6" },
-            ["@parameter"] = { fg = "#9CDCFE" },
+            -- Variables - Bright light blue
+            ["@variable"] = { fg = "#66D9EF" },
+            ["@variable.builtin"] = { fg = "#569CD6", bold = true },
+            ["@parameter"] = { fg = "#66D9EF" },
 
-            -- Keywords - VSCode purple/blue
-            ["@keyword"] = { fg = "#C586C0" },
-            ["@keyword.function"] = { fg = "#C586C0" },
-            ["@keyword.return"] = { fg = "#C586C0" },
-            ["@keyword.operator"] = { fg = "#C586C0" },
-            ["@conditional"] = { fg = "#C586C0" },
-            ["@repeat"] = { fg = "#C586C0" },
-            ["@include"] = { fg = "#C586C0" },
-            ["@exception"] = { fg = "#C586C0" },
+            -- Keywords - Bright purple/magenta
+            ["@keyword"] = { fg = "#FF6AC1", bold = true },
+            ["@keyword.function"] = { fg = "#FF6AC1", bold = true },
+            ["@keyword.return"] = { fg = "#FF6AC1", bold = true },
+            ["@keyword.operator"] = { fg = "#FF6AC1", bold = true },
+            ["@conditional"] = { fg = "#FF6AC1", bold = true },
+            ["@repeat"] = { fg = "#FF6AC1", bold = true },
+            ["@include"] = { fg = "#FF6AC1", bold = true },
+            ["@exception"] = { fg = "#FF6AC1", bold = true },
 
-            -- Types - VSCode cyan/teal
-            ["@type"] = { fg = "#4EC9B0" },
-            ["@type.builtin"] = { fg = "#4EC9B0" },
-            ["@type.qualifier"] = { fg = "#569CD6" },
-            ["@type.definition"] = { fg = "#4EC9B0" },
+            -- Types - Bright cyan/teal
+            ["@type"] = { fg = "#00E8C6", bold = true },
+            ["@type.builtin"] = { fg = "#00E8C6", bold = true },
+            ["@type.qualifier"] = { fg = "#569CD6", bold = true },
+            ["@type.definition"] = { fg = "#00E8C6", bold = true },
 
-            -- Constants - VSCode bright blue
-            ["@constant"] = { fg = "#4FC1FF" },
-            ["@constant.builtin"] = { fg = "#569CD6" },
+            -- Constants - Bright blue
+            ["@constant"] = { fg = "#36D0FF", bold = true },
+            ["@constant.builtin"] = { fg = "#36D0FF", bold = true },
 
-            -- Operators - VSCode default white/light
-            ["@operator"] = { fg = "#D4D4D4" },
+            -- Operators - Bright white
+            ["@operator"] = { fg = "#FFFFFF" },
 
-            -- Comments - VSCode green
-            ["@comment"] = { fg = "#6A9955", italic = true },
+            -- Comments - Bright green
+            ["@comment"] = { fg = "#87D96B", italic = true },
 
-            -- Properties/Fields - VSCode light blue
-            ["@property"] = { fg = "#9CDCFE" },
-            ["@field"] = { fg = "#9CDCFE" },
+            -- Properties/Fields - Bright light blue
+            ["@property"] = { fg = "#66D9EF" },
+            ["@field"] = { fg = "#66D9EF" },
 
-            -- Namespaces/Modules - VSCode cyan
-            ["@namespace"] = { fg = "#4EC9B0" },
-            ["@module"] = { fg = "#4EC9B0" },
+            -- Namespaces/Modules - Bright cyan
+            ["@namespace"] = { fg = "#00E8C6", bold = true },
+            ["@module"] = { fg = "#00E8C6", bold = true },
 
-            -- Macros/Decorators
-            ["@attribute"] = { fg = "#4EC9B0" },
-            ["@macro"] = { fg = "#569CD6" },
+            -- Macros/Decorators - Bright yellow
+            ["@attribute"] = { fg = "#FFD700" },
+            ["@macro"] = { fg = "#FFD700", bold = true },
 
-            -- Punctuation
-            ["@punctuation.bracket"] = { fg = "#D4D4D4" },
-            ["@punctuation.delimiter"] = { fg = "#D4D4D4" },
+            -- Punctuation - White
+            ["@punctuation.bracket"] = { fg = "#FFFFFF" },
+            ["@punctuation.delimiter"] = { fg = "#FFFFFF" },
 
             -- Tags (HTML/JSX)
-            ["@tag"] = { fg = "#569CD6" },
-            ["@tag.attribute"] = { fg = "#9CDCFE" },
-            ["@tag.delimiter"] = { fg = "#808080" },
+            ["@tag"] = { fg = "#FF6AC1", bold = true },
+            ["@tag.attribute"] = { fg = "#66D9EF" },
+            ["@tag.delimiter"] = { fg = "#FFFFFF" },
           },
         },
       })
