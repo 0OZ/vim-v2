@@ -32,5 +32,10 @@ vim.keymap.set("n", "<C-]>", function()
   vim.lsp.buf.definition()
 end, { desc = "Go to Definition (LSP)" })
 
+-- Add Ctrl+[ to find references
+vim.keymap.set("n", "<C-[>", function()
+  vim.lsp.buf.references()
+end, { desc = "Find References (LSP)" })
+
 -- Also add Ctrl+T to go back (standard vim behavior)
 vim.keymap.set("n", "<C-t>", "<C-o>", { desc = "Go Back" })
