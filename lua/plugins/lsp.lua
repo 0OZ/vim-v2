@@ -27,6 +27,7 @@ return {
         "gopls",       -- Go language server
         "goimports",   -- Go imports formatter
         "gofumpt",     -- Go formatter
+        "biome",       -- JavaScript/TypeScript formatter and linter
       },
     },
   },
