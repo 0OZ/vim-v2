@@ -116,17 +116,31 @@ return {
 
       vim.cmd("colorscheme github_dark_default")
 
-      -- Additional highlight overrides to match VSCode Dark+
-      vim.api.nvim_set_hl(0, "Normal", { fg = "#D4D4D4", bg = "#1E1E1E" })
-      vim.api.nvim_set_hl(0, "Function", { fg = "#DCDCAA" })
-      vim.api.nvim_set_hl(0, "String", { fg = "#CE9178" })
-      vim.api.nvim_set_hl(0, "Number", { fg = "#B5CEA8" })
-      vim.api.nvim_set_hl(0, "Identifier", { fg = "#9CDCFE" })
-      vim.api.nvim_set_hl(0, "Statement", { fg = "#C586C0" })
-      vim.api.nvim_set_hl(0, "Type", { fg = "#4EC9B0" })
-      vim.api.nvim_set_hl(0, "Constant", { fg = "#4FC1FF" })
-      vim.api.nvim_set_hl(0, "Operator", { fg = "#D4D4D4" })
-      vim.api.nvim_set_hl(0, "Comment", { fg = "#6A9955", italic = true })
+      -- Additional highlight overrides for high contrast
+      vim.api.nvim_set_hl(0, "Normal", { fg = "#FFFFFF", bg = "#0D1117" })
+      vim.api.nvim_set_hl(0, "Function", { fg = "#FFE66D", bold = true })
+      vim.api.nvim_set_hl(0, "String", { fg = "#FFA657" })
+      vim.api.nvim_set_hl(0, "Number", { fg = "#7FFF00", bold = true })
+      vim.api.nvim_set_hl(0, "Identifier", { fg = "#66D9EF" })
+      vim.api.nvim_set_hl(0, "Statement", { fg = "#FF6AC1", bold = true })
+      vim.api.nvim_set_hl(0, "Type", { fg = "#00E8C6", bold = true })
+      vim.api.nvim_set_hl(0, "Constant", { fg = "#36D0FF", bold = true })
+      vim.api.nvim_set_hl(0, "Operator", { fg = "#FFFFFF" })
+      vim.api.nvim_set_hl(0, "Comment", { fg = "#87D96B", italic = true })
+
+      -- Fix buffer tabs/tabline colors
+      vim.api.nvim_set_hl(0, "TabLine", { fg = "#66D9EF", bg = "#161B22" })
+      vim.api.nvim_set_hl(0, "TabLineSel", { fg = "#FFFFFF", bg = "#0D1117", bold = true })
+      vim.api.nvim_set_hl(0, "TabLineFill", { bg = "#161B22" })
+
+      -- Fix bufferline colors (if using bufferline.nvim)
+      vim.api.nvim_set_hl(0, "BufferLineFill", { bg = "#161B22" })
+      vim.api.nvim_set_hl(0, "BufferLineBackground", { fg = "#66D9EF", bg = "#161B22" })
+      vim.api.nvim_set_hl(0, "BufferLineBuffer", { fg = "#66D9EF", bg = "#161B22" })
+      vim.api.nvim_set_hl(0, "BufferLineBufferSelected", { fg = "#FFFFFF", bg = "#0D1117", bold = true })
+      vim.api.nvim_set_hl(0, "BufferLineBufferVisible", { fg = "#87D96B", bg = "#161B22" })
+      vim.api.nvim_set_hl(0, "BufferLineTab", { fg = "#66D9EF", bg = "#161B22" })
+      vim.api.nvim_set_hl(0, "BufferLineTabSelected", { fg = "#FFFFFF", bg = "#0D1117", bold = true })
     end,
   },
 
