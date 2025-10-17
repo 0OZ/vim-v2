@@ -55,8 +55,8 @@ return {
             ["@character"] = { fg = "#FFA657" },
 
             -- Numbers - Bright light green
-            ["@number"] = { fg = "#7FFF00", bold = true },
-            ["@float"] = { fg = "#7FFF00", bold = true },
+            ["@number"] = { fg = "#98C379", bold = true },
+            ["@float"] = { fg = "#98C379", bold = true },
             ["@boolean"] = { fg = "#569CD6", bold = true },
 
             -- Variables - Bright light blue
@@ -87,8 +87,8 @@ return {
             -- Operators - Bright white
             ["@operator"] = { fg = "#FFFFFF" },
 
-            -- Comments - Bright green
-            ["@comment"] = { fg = "#87D96B", italic = true },
+                  -- Comments - Lower contrast green
+            ["@comment"] = { fg = "#6A9955", italic = true },
 
             -- Properties/Fields - Bright light blue
             ["@property"] = { fg = "#66D9EF" },
@@ -120,13 +120,28 @@ return {
       vim.api.nvim_set_hl(0, "Normal", { fg = "#FFFFFF", bg = "#0D1117" })
       vim.api.nvim_set_hl(0, "Function", { fg = "#FFE66D", bold = true })
       vim.api.nvim_set_hl(0, "String", { fg = "#FFA657" })
-      vim.api.nvim_set_hl(0, "Number", { fg = "#7FFF00", bold = true })
+      vim.api.nvim_set_hl(0, "Number", { fg = "#98C379", bold = true })
       vim.api.nvim_set_hl(0, "Identifier", { fg = "#66D9EF" })
       vim.api.nvim_set_hl(0, "Statement", { fg = "#FF6AC1", bold = true })
       vim.api.nvim_set_hl(0, "Type", { fg = "#00E8C6", bold = true })
       vim.api.nvim_set_hl(0, "Constant", { fg = "#36D0FF", bold = true })
       vim.api.nvim_set_hl(0, "Operator", { fg = "#FFFFFF" })
-      vim.api.nvim_set_hl(0, "Comment", { fg = "#87D96B", italic = true })
+      vim.api.nvim_set_hl(0, "Comment", { fg = "#6A9955", italic = true })
+
+      -- Override UI elements to use lower contrast colors
+      vim.api.nvim_set_hl(0, "FloatBorder", { fg = "#66D9EF", bg = "#161B22" })
+      vim.api.nvim_set_hl(0, "NormalFloat", { fg = "#FFFFFF", bg = "#161B22" })
+      vim.api.nvim_set_hl(0, "Pmenu", { fg = "#FFFFFF", bg = "#161B22" })
+      vim.api.nvim_set_hl(0, "PmenuSel", { fg = "#FFFFFF", bg = "#2D333B", bold = true })
+      vim.api.nvim_set_hl(0, "PmenuBorder", { fg = "#66D9EF", bg = "#161B22" })
+
+      -- Which-key specific overrides
+      vim.api.nvim_set_hl(0, "WhichKey", { fg = "#FFE66D", bold = true })
+      vim.api.nvim_set_hl(0, "WhichKeyGroup", { fg = "#66D9EF" })
+      vim.api.nvim_set_hl(0, "WhichKeyDesc", { fg = "#FFFFFF" })
+      vim.api.nvim_set_hl(0, "WhichKeySeparator", { fg = "#6A9955" })
+      vim.api.nvim_set_hl(0, "WhichKeyFloat", { bg = "#161B22" })
+      vim.api.nvim_set_hl(0, "WhichKeyBorder", { fg = "#66D9EF", bg = "#161B22" })
 
       -- Fix buffer tabs/tabline colors
       vim.api.nvim_set_hl(0, "TabLine", { fg = "#66D9EF", bg = "#161B22" })
@@ -138,7 +153,7 @@ return {
       vim.api.nvim_set_hl(0, "BufferLineBackground", { fg = "#66D9EF", bg = "#161B22" })
       vim.api.nvim_set_hl(0, "BufferLineBuffer", { fg = "#66D9EF", bg = "#161B22" })
       vim.api.nvim_set_hl(0, "BufferLineBufferSelected", { fg = "#FFFFFF", bg = "#0D1117", bold = true })
-      vim.api.nvim_set_hl(0, "BufferLineBufferVisible", { fg = "#87D96B", bg = "#161B22" })
+      vim.api.nvim_set_hl(0, "BufferLineBufferVisible", { fg = "#6A9955", bg = "#161B22" })
       vim.api.nvim_set_hl(0, "BufferLineTab", { fg = "#66D9EF", bg = "#161B22" })
       vim.api.nvim_set_hl(0, "BufferLineTabSelected", { fg = "#FFFFFF", bg = "#0D1117", bold = true })
     end,

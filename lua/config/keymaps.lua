@@ -26,3 +26,11 @@ vim.keymap.set("v", "<A-k>", function()
     vim.cmd("m '<-2<cr>gv=gv")
   end
 end, { desc = "Move Up" })
+
+-- Override Ctrl+] to use LSP definition instead of tags
+vim.keymap.set("n", "<C-]>", function()
+  vim.lsp.buf.definition()
+end, { desc = "Go to Definition (LSP)" })
+
+-- Also add Ctrl+T to go back (standard vim behavior)
+vim.keymap.set("n", "<C-t>", "<C-o>", { desc = "Go Back" })
