@@ -21,7 +21,7 @@ return {
 
   -- Ensure gopls is installed via Mason
   {
-    "williamboman/mason.nvim",
+    "mason-org/mason.nvim",
     opts = {
       ensure_installed = {
         "gopls",       -- Go language server
