@@ -2,6 +2,7 @@ return {
   -- Treesitter for better syntax highlighting
   {
     "nvim-treesitter/nvim-treesitter",
+    build = ":TSUpdate",
     opts = {
       ensure_installed = {
         "bash",
