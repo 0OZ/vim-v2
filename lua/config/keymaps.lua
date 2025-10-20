@@ -39,3 +39,36 @@ end, { desc = "Find References (LSP)" })
 
 -- Also add Ctrl+T to go back (standard vim behavior)
 vim.keymap.set("n", "<C-t>", "<C-o>", { desc = "Go Back" })
+
+-- Biome: Fix imports and remove unused (TypeScript/TSX)
+vim.keymap.set("n", "<leader>xi", function()
+  local ft = vim.bo.filetype
+  if ft == "typescript" or ft == "typescriptreact" or ft == "javascript" or ft == "javascriptreact" then
+    local bufnr = vim.api.nvim_get_current_buf()
+    local filepath = vim.api.nvim_buf_get_name(bufnr)
+
+    if filepath == "" then
+      vim.notify("Buffer must be saved to a file first", vim.log.levels.WARN)
+      return
+    end
+
+    -- Save the buffer first
+    vim.cmd("write")
+
+    -- Run biome check with organize imports
+    local cmd = string.format("biome check --write --unsafe %s 2>&1", vim.fn.shellescape(filepath))
+    local output = vim.fn.system(cmd)
+    local exit_code = vim.v.shell_error
+
+    -- Reload the buffer
+    vim.cmd("edit!")
+
+    if exit_code == 0 then
+      vim.notify("Imports organized with Biome", vim.log.levels.INFO)
+    else
+      vim.notify("Biome failed: " .. output, vim.log.levels.ERROR)
+    end
+  else
+    vim.notify("Biome organize imports only works on TS/TSX/JS/JSX files", vim.log.levels.WARN)
+  end
+end, { desc = "Organize Imports (Biome)" })
