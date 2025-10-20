@@ -11,7 +11,7 @@ vim.o.ttimeoutlen = 10 -- Faster key code delay
 vim.o.smoothscroll = false
 
 -- LSP log level (use "debug" for troubleshooting, "warn" for normal use, "error" to suppress most messages)
-vim.lsp.set_log_level("error")
+vim.lsp.log.level = "error"
 
 -- LSP diagnostics configuration
 vim.diagnostic.config({
