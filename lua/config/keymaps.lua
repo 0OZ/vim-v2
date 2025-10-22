@@ -27,6 +27,35 @@ vim.keymap.set("v", "<A-k>", function()
   end
 end, { desc = "Move Up" })
 
+-- VSCode-style: Move line up/down with Alt + arrow keys
+vim.keymap.set("n", "<M-Up>", function()
+  if vim.bo.modifiable then
+    vim.cmd("move .-2")
+    vim.cmd("normal! ==")
+  end
+end, { noremap = true, silent = true, desc = "Move Up" })
+
+vim.keymap.set("n", "<M-Down>", function()
+  if vim.bo.modifiable then
+    vim.cmd("move .+1")
+    vim.cmd("normal! ==")
+  end
+end, { noremap = true, silent = true, desc = "Move Down" })
+
+vim.keymap.set("v", "<M-Up>", function()
+  if vim.bo.modifiable then
+    vim.cmd("move '<-2")
+    vim.cmd("normal! gv=gv")
+  end
+end, { noremap = true, silent = true, desc = "Move Up" })
+
+vim.keymap.set("v", "<M-Down>", function()
+  if vim.bo.modifiable then
+    vim.cmd("move '>+1")
+    vim.cmd("normal! gv=gv")
+  end
+end, { noremap = true, silent = true, desc = "Move Down" })
+
 -- Override Ctrl+] to use LSP definition instead of tags
 vim.keymap.set("n", "<C-]>", function()
   vim.lsp.buf.definition()
@@ -72,3 +101,16 @@ vim.keymap.set("n", "<leader>xi", function()
     vim.notify("Biome organize imports only works on TS/TSX/JS/JSX files", vim.log.levels.WARN)
   end
 end, { desc = "Organize Imports (Biome)" })
+
+-- SSH Clipboard
+vim.g.clipboard = {
+  name = "osc52",
+  copy = {
+    ["+"] = require("vim.ui.clipboard.osc52").copy("+"),
+    ["*"] = require("vim.ui.clipboard.osc52").copy("*"),
+  },
+  paste = {
+    ["+"] = require("vim.ui.clipboard.osc52").paste("+"),
+    ["*"] = require("vim.ui.clipboard.osc52").paste("*"),
+  },
+}
