@@ -129,6 +129,19 @@ return {
       vim.api.nvim_set_hl(0, "BufferLineBufferVisible", { fg = "#6A9955", bg = "#161B22" })
       vim.api.nvim_set_hl(0, "BufferLineTab", { fg = "#66D9EF", bg = "#161B22" })
       vim.api.nvim_set_hl(0, "BufferLineTabSelected", { fg = "#FFFFFF", bg = "#0D1117", bold = true })
+
+      -- Fix Snacks.nvim picker/select UI (for file deletion confirmations, etc.)
+      vim.api.nvim_set_hl(0, "SnacksPickerPrompt", { fg = "#FFFFFF", bg = "#161B22" })
+      vim.api.nvim_set_hl(0, "SnacksPickerTitle", { fg = "#FFE66D", bg = "#161B22", bold = true })
+      vim.api.nvim_set_hl(0, "SnacksPickerItem", { fg = "#FFFFFF", bg = "#161B22" })
+      vim.api.nvim_set_hl(0, "SnacksPickerItemSelected", { fg = "#FFFFFF", bg = "#2D333B", bold = true })
+      vim.api.nvim_set_hl(0, "SnacksPickerBorder", { fg = "#66D9EF", bg = "#161B22" })
+      vim.api.nvim_set_hl(0, "SnacksPickerMatch", { fg = "#FF6AC1", bold = true })
+
+      -- General UI confirmations and messages
+      vim.api.nvim_set_hl(0, "Title", { fg = "#FFE66D", bold = true })
+      vim.api.nvim_set_hl(0, "Question", { fg = "#36D0FF", bold = true })
+      vim.api.nvim_set_hl(0, "MoreMsg", { fg = "#98C379", bold = true })
     end,
   },
 }
