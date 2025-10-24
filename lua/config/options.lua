@@ -25,3 +25,6 @@ vim.diagnostic.config({
     source = "always", -- Show error source (e.g., "kotlin_language_server")
   },
 })
+
+-- Hide tab characters (no more > symbols)
+vim.opt.listchars = { tab = '  ', trail = '·' }
