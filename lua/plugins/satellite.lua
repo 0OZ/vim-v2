@@ -7,7 +7,21 @@ return {
       current_only = false,
       winblend = 50,
       zindex = 40,
-      excluded_filetypes = {},
+      excluded_filetypes = {
+        "prompt",
+        "TelescopePrompt",
+        "noice",
+        "notify",
+        "neo-tree",
+        "help",
+        "alpha",
+        "dashboard",
+        "lazy",
+        "mason",
+        "NvimTree",
+        "Trouble",
+        "trouble",
+      },
       width = 2,
       handlers = {
         cursor = {
@@ -34,5 +48,20 @@ return {
         },
       },
     },
+    config = function(_, opts)
+      require("satellite").setup(opts)
+
+      -- Add error handling to prevent crashes on buffer deletion
+      local ok, view = pcall(require, "satellite.view")
+      if ok and view then
+        local original_update = view.update
+        view.update = function(...)
+          local success, err = pcall(original_update, ...)
+          if not success and not err:match("unable to get a view") then
+            vim.notify("Satellite error: " .. tostring(err), vim.log.levels.WARN)
+          end
+        end
+      end
+    end,
   },
 }
