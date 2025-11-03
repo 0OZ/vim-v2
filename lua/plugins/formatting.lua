@@ -14,7 +14,7 @@ return {
       formatters = {
         biome = {
           command = "biome",
-          args = { "format", "--stdin-file-path", "$FILENAME" },
+          args = { "check", "--write", "--unsafe", "--stdin-file-path", "$FILENAME" },
           stdin = true,
         },
       },
